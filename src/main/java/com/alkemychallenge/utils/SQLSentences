@@ -1,0 +1,34 @@
+# GENERACION DE BD
+CREATE DATABASE alkemy_challenge;
+USE DATABASE alkemy_challenge;
+
+# GENERO PELICULAS
+INSERT INTO `alkemy_challenge`.`generos` (`imagen`, `nombre`) VALUES ('https://tse1.mm.bing.net/th?id=OIP.wdmoo8NOqwuhi4BUzs5SmQHaFj&pid=Api', 'Acción');
+INSERT INTO `alkemy_challenge`.`generos` (`imagen`, `nombre`) VALUES ('https://cdn.pixabay.com/photo/2016/11/21/17/02/adventure-1846482__340.jpg', 'Aventura');
+INSERT INTO `alkemy_challenge`.`generos` (`imagen`, `nombre`) VALUES ('https://cdn.pixabay.com/photo/2017/03/28/22/55/night-photograph-2183637__340.jpg', 'Ciencia Ficción');
+INSERT INTO `alkemy_challenge`.`generos` (`imagen`, `nombre`) VALUES ('https://www.rollingstone.com/wp-content/uploads/2019/10/spongebob-musical.jpg', 'Musical');
+INSERT INTO `alkemy_challenge`.`generos` (`imagen`, `nombre`) VALUES ('https://cdn.pixabay.com/photo/2018/02/15/19/42/sunset-3156176__340.jpg', 'Drama');
+
+# PELICULAS
+INSERT INTO `alkemy_challenge`.`peliculas` (`calificacion`, `fecha_creacion`, `imagen`, `titulo`, `genero_id`) VALUES ('5', '1994-07-07', 'https://tse2.mm.bing.net/th?id=OIP.UHZg6S17su6UoA12RRqueQHaLM&pid=Api', 'El Rey León', '5');
+INSERT INTO `alkemy_challenge`.`peliculas` (`calificacion`, `fecha_creacion`, `imagen`, `titulo`, `genero_id`) VALUES ('4', '1998-10-26', 'https://tse2.mm.bing.net/th?id=OIP.XeQgsz6PAOrtjKHsrEcS5AHaK2&pid=Api', 'El Rey León 2: El reino de Simba', '2');
+INSERT INTO `alkemy_challenge`.`peliculas` (`calificacion`, `fecha_creacion`, `imagen`, `titulo`, `genero_id`) VALUES ('3', '2004-02-09', 'https://tse4.mm.bing.net/th?id=OIP.r0Jm3EmpuHeHredLWG9abAHaLH&pid=Api', 'El Rey León 3', '2');
+INSERT INTO `alkemy_challenge`.`peliculas` (`calificacion`, `fecha_creacion`, `imagen`, `titulo`, `genero_id`) VALUES ('5', '1996-06-27', 'https://tse1.mm.bing.net/th?id=OIP.PfhaEfKxBpqJEEx0lAWIcAHaIi&pid=Api', 'El jorobado de Notre Dame', '5');
+INSERT INTO `alkemy_challenge`.`peliculas` (`calificacion`, `fecha_creacion`, `imagen`, `titulo`, `genero_id`) VALUES ('5', '1992-11-25', 'https://tse1.mm.bing.net/th?id=OIP.HjqNMi_KhUAEO_uVMTbTjQHaLH&pid=Api', 'Aladdín', '4');
+INSERT INTO `alkemy_challenge`.`peliculas` (`calificacion`, `fecha_creacion`, `imagen`, `titulo`, `genero_id`) VALUES ('4', '1995-06-23', 'https://tse2.mm.bing.net/th?id=OIP.GuPjLChNAwIXpzJ1RTE34gHaEK&pid=Api', 'Pocahontas', '4');
+
+# PERSONAJES
+INSERT INTO `alkemy_challenge`.`personajes` (`edad`, `historia`, `imagen`, `nombre`, `peso`) VALUES ('15', 'Jasmín es una hermosa princesa hija de quince años de edad del Sultán de Agrabah.', 'https://cdn.alfabetajuega.com/alfabetajuega/2021/01/jazmin.jpg?width=1200', 'Jasmín', '45');
+INSERT INTO `alkemy_challenge`.`personajes` (`edad`, `historia`, `imagen`, `nombre`, `peso`) VALUES ('1000', 'Genio es el tritagonista de la película Aladdín. Es un Genio, un espíritu cómico, muy poderoso, que actúa como un sirviente de quien tiene la propiedad de la lámpara.', 'https://cdn.alfabetajuega.com/alfabetajuega/2021/01/genio.jpg?width=1200', 'El Genio', '00');
+INSERT INTO `alkemy_challenge`.`personajes` (`edad`, `historia`, `imagen`, `nombre`, `peso`) VALUES ('18', 'Pocahontas fue una nativa americana del Siglo XVII además de ser la hija mayor del jefe Powhatan.', 'https://cdn.alfabetajuega.com/alfabetajuega/2021/01/pocahontas.jpg?width=1200', 'Pocahontas', '43');
+INSERT INTO `alkemy_challenge`.`personajes` (`edad`, `historia`, `imagen`, `nombre`, `peso`) VALUES ('20', 'Quasimodo es el personaje principal de la obra Nuestra Señora de París, del escritor francés Victor Hugo, un hombre que vivía en la catedral.', 'https://cdn.alfabetajuega.com/alfabetajuega/2021/01/quasimodo.jpg?width=1200', 'Quasimodo', '78');
+INSERT INTO `alkemy_challenge`.`personajes` (`edad`, `historia`, `imagen`, `nombre`, `peso`) VALUES ('10', 'Simba es el personaje protagonista de la clásica trilogía de Disney El rey león,', 'https://cdn.alfabetajuega.com/alfabetajuega/2021/01/simba.jpg?width=1200', 'Simba', '90');
+
+# RELACION PERSONAJE PELICULA
+INSERT INTO `alkemy_challenge`.`personajes_peliculas` (`id_pelicula`, `id_personaje`) VALUES ('5', '1');
+INSERT INTO `alkemy_challenge`.`personajes_peliculas` (`id_pelicula`, `id_personaje`) VALUES ('5', '2');
+INSERT INTO `alkemy_challenge`.`personajes_peliculas` (`id_pelicula`, `id_personaje`) VALUES ('1', '5');
+INSERT INTO `alkemy_challenge`.`personajes_peliculas` (`id_pelicula`, `id_personaje`) VALUES ('2', '5');
+INSERT INTO `alkemy_challenge`.`personajes_peliculas` (`id_pelicula`, `id_personaje`) VALUES ('3', '5');
+INSERT INTO `alkemy_challenge`.`personajes_peliculas` (`id_pelicula`, `id_personaje`) VALUES ('6', '3');
+INSERT INTO `alkemy_challenge`.`personajes_peliculas` (`id_pelicula`, `id_personaje`) VALUES ('4', '4');
